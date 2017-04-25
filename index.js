@@ -17,8 +17,8 @@ router.post('/search',function(req,res){
     var opts = {maxResults:20,key:'AIzaSyBsTzQhNubTEN-xwzSTZRwUEUSbZYEcRss',type:'video'};
     youtubeSearch(req.body.query,opts,function(err,results){
         if(err) return console.log(err);
-        res.send(results);
-    });8
+        res.json({success:true,results});
+    });
 });
 router.post('/download',function(req,res){
     var id = req.body.link.substr(req.body.link.length - 11);
