@@ -14,7 +14,7 @@ router.use(function(req,res,next){
     next();
 });
 router.post('/search',function(req,res){
-    var opts = {maxResults:20,key:'AIzaSyBsTzQhNubTEN-xwzSTZRwUEUSbZYEcRss'};
+    var opts = {maxResults:20,key:'AIzaSyBsTzQhNubTEN-xwzSTZRwUEUSbZYEcRss',type:'video'};
     youtubeSearch(req.body.query,opts,function(err,results){
         if(err) return console.log(err);
         res.send(results);
