@@ -28,7 +28,7 @@ router.post('/download',function(req,res){
 });
 router.post('/finish',function(req,res){
     var id = req.body.link.substr(req.body.link.length - 11);
-    fs.unlink(id+'.mp4');
+    fs.unlink('../static_content/'+id+'.mp4');
     res.json({success:true});
 });
 app.listen(port);
