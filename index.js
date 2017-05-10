@@ -22,9 +22,9 @@ router.post('/search',function(req,res){
 });
 router.post('/download',function(req,res){
     var id = req.body.link.substr(req.body.link.length - 11);
-    ytdl(req.body.link,{ filter: function(format) { return format.container === 'mp4'; }}).pipe(fs.createWriteStream('../static_content/' + id + '.mp4')).on('close',function(){
+    ytdl(req.body.link,{ filter: function(format) { return format.container === 'mp4'; }}).pipe(fs.createWriteStream('../static_content/' + id + '.mp4'))
         res.json({success:true, message:'https://myfuckingapi.com/'+id+'.mp4'});
-    });
+  
 });
 router.post('/finish',function(req,res){
     var id = req.body.link.substr(req.body.link.length - 11);
