@@ -1,5 +1,8 @@
 # nodie-YTDL
 
+1. Don't forget to ```npm install```
+2. ```node index.js```
+
 Simple utube downloader ! 
 
 API : 
