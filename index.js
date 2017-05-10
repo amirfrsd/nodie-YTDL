@@ -7,7 +7,7 @@ var router = express.Router();
 var fs = require('fs');
 var youtubeDl = require('youtube-dl');
 var ytdl = require('ytdl-core');
-var badWords = ["sex","porn","sexy","nude","pornstar","xxx","سکس","پورن","جنده","کس","کیر","کون","dick"];
+var badWords = ["bad","words","here"];
 var badWordNegatives = ["movie","song","clip","album","track","music","book","magazine","آهنگ","فیلم","کلیپ"];
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
