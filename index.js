@@ -10,6 +10,8 @@ var ytdl = require('ytdl-core');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use('/',router);
+var isValidSearchTerm = function(searchQuery) {
+}
 router.use(function(req,res,next){
     next();
 });
